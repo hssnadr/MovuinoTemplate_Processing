@@ -1,6 +1,6 @@
 # Processing template for Movuino
 
-Those templates are part of the Movuino project: http://www.movuino.com/  
+Those templates are part of the Movuino project: http://www.movuino.com/ 
 
 Quick start tutorial to use those templates: http://www.movuino.com/index.php/quick-start/
 
