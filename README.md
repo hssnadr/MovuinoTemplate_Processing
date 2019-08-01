@@ -1,6 +1,6 @@
 <img src="" width="600" style="float: center;">
 
-![alt tag](https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg#center=600)
+![alt tag](https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg#center=600px)
 
 # Processing template for Movuino
 
