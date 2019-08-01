@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg" width="600" style="float: middle;">
+<img src="https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg" width="600" style="float: center;">
 
 # Processing template for Movuino
 
