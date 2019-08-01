@@ -1,4 +1,4 @@
-[<img src="https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg">]
+<img src="https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg">
 
 # Processing template for Movuino
 
