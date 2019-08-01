@@ -1,3 +1,5 @@
+[<img src="https://raw.githubusercontent.com/hssnadr/Movuina_HandsON/master/Media/Home.jpg">]
+
 # Processing template for Movuino
 
 Those templates are part of the Movuino project: http://www.movuino.com/  
