@@ -37,7 +37,7 @@ void setup() {
   // extract paths and points from the base shape using the above Segmentator settings
   allPaths = shape.getPointsInPaths();
   
-  // callMovuino("127.0.0.1", 3000, 3001); // do not change values if using the Movuino interface
+ callMovuino("127.0.0.1", 3000, 3001); // do not change values if using the Movuino interface
 }
 
 void draw() {
