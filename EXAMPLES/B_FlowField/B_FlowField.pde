@@ -24,10 +24,8 @@ long timerParticles0;
 int maxParticles = 1000; // the maximum number of active particles
 
 long timerSensor0;
-int deltaTimeSensor = 40;
-float oldx;
-float oldy;
-float oldTime;
+int deltaTimeSensor = 10;
+float oldData = 0;
 
 void setup() {
   size(1000, 450, P2D);
@@ -46,11 +44,6 @@ void setup() {
   // MOVUINO
   callMovuino("127.0.0.1", 3000, 3001); // do not change values if using the Movuino interface
 
-  // Data
-  oldx = 0;
-  oldy = 0;
-  oldTime = millis();
-
   timerParticles0 = millis();
   timerSensor0 = millis();
 }
@@ -63,26 +56,21 @@ void draw() {
     timerSensor0 = millis();
 
     // ----------------------------------------------------------------------------------------------
-    // Exercise: change those variables to adapt the behavior of the bubbles with the Movuino movement
     float particleEnergy;    // valeur varie entre 0 et 1
     float angleDirection;  // valeur varie entre 0 et TWO_PI // entre 0 et 6,28
     int particleDensity;   // valeur varie entre 0 et 10
 
     float x_ = movuino.ax;
     float y_ = movuino.ay;
-    long time_ = millis();
+    float z_ = movuino.az;
+    float norm_ = pow(pow(x_, 2) + pow(y_, 2) + pow(z_, 2), 2);
+    float derivate_ = 10.0 * abs(norm_ - oldData) /  deltaTimeSensor;
+    oldData = norm_;
 
-    float dx_ = abs(x_ - oldx) / deltaTimeSensor;
-    float dy_ = abs(y_ - oldy) / deltaTimeSensor;
-    oldx = x_;
-    oldy = y_;
-    oldTime = time_;
-
-    float globalEnergy = 10 * pow(pow(100 * dx_, 2) + pow(100 * dy_, 2), 2);
+    float globalEnergy = 10 * derivate_;
     globalEnergy = constrain(globalEnergy, 0, 23);
     particleDensity = round(random(2) + globalEnergy);
     particleEnergy =  globalEnergy / 23.0f;
-    println(particleEnergy);
     // ----------------------------------------------------------------------------------------------
 
     // Manage particles creation

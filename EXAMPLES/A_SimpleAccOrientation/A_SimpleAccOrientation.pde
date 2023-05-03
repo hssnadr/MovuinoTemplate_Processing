@@ -6,7 +6,7 @@ color c3 = color(245, 91, 85, 255);
 
 void setup() {
   size(500, 500);
-  // callMovuino("127.0.0.1", 3000, 3001); // do not change values if using Movuina
+  callMovuino("127.0.0.1", 3000, 3001); // do not change values if using Movuina
 }
 
 void draw(){
